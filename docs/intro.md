@@ -2,46 +2,62 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Why
+
+Working with webhooks is painful because you need:
+- To trigger the webhook
+- To convey the webhook to your dev environment
+
+Open webhooks gives you a public URL that stores a webhook for as long as you want. 
+
+You'll never have to configure a new temporary ngrok url. Whenever a webhook is received, anyone from your team can analyze and replay this webhook.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started by **creating a new Webhook Store**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Or **try Open Webhook immediately** with **[openwebhook.io](https://www.openwebhook.io)** with some github webhooks.
 
 ### What you'll need
+- A [Heroku](https://heroku.com) account to create a workspace with
+  - A free dyno [up to 550 hours uptime](https://devcenter.heroku.com/changelog-items/907#:~:text=Starting%20today%2C%20Heroku%20accounts%20have,for%20an%20additional%20450%20hours.)
+  - A free databade that stores [up to 10000 webhooks](https://devcenter.heroku.com/changelog-items/907#:~:text=Starting%20today%2C%20Heroku%20accounts%20have,for%20an%20additional%20450%20hours.)
 
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Create an Webhook Store
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+Clone the webhook store project
+```
+git clone git@github.com:OpenWebhook/webhook-store.git
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+Create a heroku app
 
 ```bash
-cd my-website
-npm run start
+cd webhook-store
+heroku create webhook-store-YOURORG
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Add a database
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```bash
+heroku addons:create heroku-postgresql:hobby-dev
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Push the project on heroku
+```bash
+git push heroku
+```
+
+## Test your webhook store
+
+You should have a Heroku domain `webhook-store-YOURORG.herokuapp.com` all the webhooks should posted on `/webhook`
+
+Use Curl to POST a webhook on the store
+
+```sh
+curl -X POST https://webhook-store-YOURORG.herokuapp.com/webhook/some-url -d 'yolo=croute'
+```
+
+You should see that your webhook was received by the store, with the ID 1 and a creation date corresponding at the moment you sent the request.
