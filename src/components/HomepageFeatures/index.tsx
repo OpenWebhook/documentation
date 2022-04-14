@@ -10,32 +10,30 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Almost No Installation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Create your self hosted Webhook Store in less than a minute, for free using Heroku.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Start Working with your Webhooks',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Plug the OpenWebhook client to your store and start developping.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Share with your Team',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        You keep your webhooks from a session to another. 
+        Every member of your team can replay those webhooks.
       </>
     ),
   },
