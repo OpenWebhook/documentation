@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.svg",
   organizationName: "OpenWebhook",
-  projectName: "website",
+  projectName: "documentation",
 
   presets: [
     [
