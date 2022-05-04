@@ -4,6 +4,11 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import posthog from "posthog-js";
+
+posthog.init('phc_gaWo4JFok5X2n792nFxFstwZDJS9b2Wtt9jFTmEMV0Z', {
+  api_host: "https://app.posthog.com",
+});
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
