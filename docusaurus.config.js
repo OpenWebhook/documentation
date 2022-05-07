@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Open Webhook",
   tagline: "Simple Open Source webhook tool for development",
-  url: "https://docs.openwebhook.io",
+  url: "https://www.openwebhook.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

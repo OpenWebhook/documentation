@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Get started by **creating a new Webhook Store**.
 
-Or **try Open Webhook immediately** with **[openwebhook.io](https://www.openwebhook.io)** with some github webhooks.
+Or **try Open Webhook immediately** with **[openwebhook.io](https://demo.openwebhook.io)** with some github webhooks.
 
 ### What you'll need
 - A [Heroku](https://heroku.com) account to create a workspace with
