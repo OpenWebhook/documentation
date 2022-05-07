@@ -51,6 +51,12 @@ const config = {
             label: "Documentation",
           },
           {
+            href: "https://demo.openwebhook.io",
+            docId: "demo",
+            position: "left",
+            label: "Demo",
+          },
+          {
             href: "https://github.com/OpenWebhook",
             label: "GitHub",
             position: "right",
