@@ -1,6 +1,6 @@
 import React from "react";
 import TypeAnimation from "react-type-animation";
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 import { names } from "./names";
 
 const randomName = names[Math.floor(Math.random() * names.length)];
@@ -10,7 +10,7 @@ const namesWithDelay = names.reduce((acc, current) => {
   return acc;
 }, []);
 
-export function WebhookStoreUrl() {
+export default function WebhookStoreUrl() {
   return (
     <p className="hero__subtitle">
       <span>Claim your subdomain</span>
