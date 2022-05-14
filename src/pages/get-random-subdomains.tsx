@@ -1,4 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
+import TypeAnimation from "react-type-animation";
+import styles from "./index.module.css";
 
 const names = [
   "Joshua",
@@ -101,27 +103,32 @@ const names = [
   "Sean",
   "Bobby",
 ];
+const randomName = names[Math.floor(Math.random() * names.length)];
+const namesWithDelay = names.reduce((acc, current) => {
+  acc.push(current.toLocaleLowerCase());
+  acc.push(2000);
+  return acc;
+}, []);
 
 export function WebhookStoreUrl() {
-  const [subDomain, setnewName] = useState("croute");
-
-  const shuffle = useCallback(() => {
-    const index = Math.floor(Math.random() * names.length);
-    setnewName(names[index]);
-  }, []);
-
-  useEffect(() => {
-    const intervalID = setInterval(shuffle, 1000);
-    return () => clearInterval(intervalID);
-  }, [shuffle]);
   return (
-    <p
-      className="hero__subtitle"
-      onClick={() => {
-        location.href = `https://${subDomain}.webhook.store`;
-      }}
-    >
-      Try it on {subDomain}.webhook.store
+    <p className="hero__subtitle">
+      <span>Claim your subdomain</span>
+      <br />
+
+      <a
+        href={`https://${randomName}.webhook.store`}
+        className={styles.heroLink}
+      >
+        https://
+        <TypeAnimation
+          cursor={false}
+          sequence={namesWithDelay}
+          wrapper="span"
+          repeat={Infinity}
+        />
+        .webhook.store
+      </a>
     </p>
   );
 }
