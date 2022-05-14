@@ -21,3 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.heroLink, .heroLink:hover {
+  color: var(--ifm-font-color-base-inverse)
+}
