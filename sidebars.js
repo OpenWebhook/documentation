@@ -32,6 +32,16 @@ const sidebars = {
           id: "self-hosting/install-store-heroku",
           label: "Heroku (Free)",
         },
+        {
+          type: "doc",
+          id: "self-hosting/install-store-docker-compose",
+          label: "Docker Compose",
+        },
+        {
+          type: "doc",
+          id: "self-hosting/install-store-kubernetes",
+          label: "Kubernetes",
+        },
       ],
     },
     {
