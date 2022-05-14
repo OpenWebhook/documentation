@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+id: trouble-shoot
+slug: troubleshoot-replay-webhook
 ---
 
 # Troubleshoot Replay Webhook
