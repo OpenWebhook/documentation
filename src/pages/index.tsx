@@ -5,7 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import posthog from "posthog-js";
-import { WebhookStoreUrl } from "./get-random-subdomains";
+import WebhookStoreUrl from "../components/HomepageFeatures/get-random-subdomains";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
