@@ -2,6 +2,7 @@ import React from "react";
 import TypeAnimation from "react-type-animation";
 import styles from "./styles.module.css";
 import { names } from "./names";
+import posthog from "posthog-js";
 
 const randomName = names[Math.floor(Math.random() * names.length)];
 const namesWithDelay = names.reduce((acc, current) => {
@@ -16,9 +17,12 @@ export default function WebhookStoreUrl() {
       <span>Claim your subdomain</span>
       <br />
 
-      <a
-        href={`https://${randomName}.webhook.store`}
-        className={styles.heroLink}
+      <button
+        onClick={() => {
+          window.location.href = `https://${randomName}.webhook.store`;
+          posthog.capture("claim_from_documentation");
+        }}
+        className={styles.heroButton}
       >
         https://
         <TypeAnimation
@@ -28,7 +32,7 @@ export default function WebhookStoreUrl() {
           repeat={Infinity}
         />
         .webhook.store
-      </a>
+      </button>
     </p>
   );
 }
