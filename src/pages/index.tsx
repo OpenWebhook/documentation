@@ -5,7 +5,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import posthog from "posthog-js";
-import WebhookStoreUrl from "../components/HomepageFeatures/get-random-subdomains";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -14,16 +13,11 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <WebhookStoreUrl />
-        <span className={styles.indexCtasGitHubButtonWrapper}>
-          <iframe
-            className={styles.indexCtasGitHubButton}
-            src="https://ghbtns.com/github-btn.html?user=OpenWebhook&amp;repo=webhook-store&amp;type=star&amp;count=true&amp;size=large"
-            width={160}
-            height={30}
-            title="GitHub Stars"
-          />
-        </span>
+        <img
+          src="img/demo.gif"
+          alt="funny animation GIF"
+          style={{ maxWidth: "60%" }}
+        />
       </div>
     </header>
   );
