@@ -13,6 +13,9 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div style={{ marginBottom: "20px" }}>
+          <code>npx webhook-store-cli --port 9000</code>
+        </div>
         <img
           src="img/demo.gif"
           alt="funny animation GIF"
