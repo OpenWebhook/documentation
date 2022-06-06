@@ -4,6 +4,8 @@ id: intro
 
 # Introduction
 
+![Demo with cli](/img/demo.gif)
+
 ## Why
 
 Working with webhooks is painful because you need:
