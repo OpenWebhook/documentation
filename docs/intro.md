@@ -21,10 +21,10 @@ You'll never have to configure a new temporary ngrok url. Whenever a webhook is 
 
 ### Free webhook store
 
-You can use any `*.webhook.store` subdomain for free.
-For instance **[CHANGE_ME.webhook.store](https://changeme.webhook.store)**.
+If you are a github user, you can go on your personnal store ["YOUR_GITHUB_USER.github.webhook.store"](https://github.webhook.store).
 
-Or try OpenWebhook immediately with [demo.openwebhook.io](https://demo.openwebhook.io) with some github webhooks.
+Otherwise, you can use any `*.webhook.store` subdomain, but it is public.
+For instance **[CHANGE_ME.webhook.store](https://changeme.webhook.store)**.
 
 ### Self hosted webhook store
 

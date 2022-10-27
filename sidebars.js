@@ -30,7 +30,7 @@ const sidebars = {
         {
           type: "doc",
           id: "self-hosting/install-store-heroku",
-          label: "Heroku (Free)",
+          label: "Heroku",
         },
         {
           type: "doc",
