@@ -13,8 +13,8 @@ Or **try Open Webhook immediately** with **[openwebhook.io](https://demo.openweb
 ### What you'll need
 
 - A [Heroku](https://heroku.com) account to create a workspace with
-  - A free dyno [up to 550 hours uptime](https://devcenter.heroku.com/changelog-items/907#:~:text=Starting%20today%2C%20Heroku%20accounts%20have,for%20an%20additional%20450%20hours.)
-  - A free databade that stores [up to 10000 webhooks](https://devcenter.heroku.com/changelog-items/907#:~:text=Starting%20today%2C%20Heroku%20accounts%20have,for%20an%20additional%20450%20hours.)
+  - [A dyno](https://devcenter.heroku.com/categories/dynos)
+  - [A database](https://devcenter.heroku.com/articles/heroku-postgres-plans#hobby-tier)
 - The [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-with-an-installer)
 
 ## Create an Webhook Store
@@ -25,13 +25,13 @@ Clone the webhook store project
 git clone https://github.com/OpenWebhook/webhook-store.git && cd webhook-store
 ```
 
-Create a heroku app (free)
+Create a heroku app
 
 ```bash
 heroku create webhook-store-YOURORG
 ```
 
-Add a database (free)
+Add a database
 
 ```bash
 heroku addons:create heroku-postgresql:hobby-dev
