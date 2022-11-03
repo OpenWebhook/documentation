@@ -4,8 +4,6 @@ id: intro
 
 # Introduction
 
-![Demo with cli](/img/demo.gif)
-
 ## Why
 
 Working with webhooks is painful because you need:
@@ -21,7 +19,7 @@ You'll never have to configure a new temporary ngrok url. Whenever a webhook is 
 
 ### Free webhook store
 
-If you are a github user, you can go on your personnal store ["YOUR_GITHUB_USER.github.webhook.store"](https://github.webhook.store).
+If you are a github user, you can go on your personnal store ["*.github.webhook.store"](https://github.webhook.store).
 
 Otherwise, you can use any `*.webhook.store` subdomain, but it is public.
 For instance **[CHANGE_ME.webhook.store](https://changeme.webhook.store)**.
