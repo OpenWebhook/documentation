@@ -51,7 +51,7 @@ https://api.github.com/users/$GITHUB_USER/orgs
 
 For instance, [the organisations of the user Samox](https://api.github.com/users/Samox/orgs) contains OpenWebhook, hence Samox will have access to `openwebhook.github-org.webhook.store`
 
-By default, github makes organisation membership private. If your membership is not public, here is [Github documentation to publicize membership](Publicizing or hiding organization membership)
+By default, github makes organisation membership private. If your membership is not public, here is [Github documentation to publicize membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership).
 
 # Self hosting webhook store
 
